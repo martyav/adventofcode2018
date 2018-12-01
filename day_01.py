@@ -31,7 +31,12 @@ Here are other example situations:
 Starting with a frequency of zero, what is the resulting frequency after all of the changes in frequency have been applied?
 """
 
-arr = input.split('\n')
+handwave = """1
+2
+3
+-6"""
+
+arr = handwave.split('\n')
 frequency = reduce((lambda x, y: int(x) + int(y)), arr)
 
 print(f'The frequency is { frequency }')
