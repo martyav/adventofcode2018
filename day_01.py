@@ -63,32 +63,32 @@ Here are other examples:
 What is the first frequency your device reaches twice?
 """
 
-def track_sums(arr):
+def track_totals(arr):
     totals = []
-    total = 0
+    running_total = 0
 
     for value in arr:
-        total += int(value)
-        totals.append(total)
+        running_total += int(value)
+        totals.append(running_total)
 
-    total_set = set(totals)
+    totals_set = set(totals)
 
-    return total_set
+    return totals_set
 
 def find_dupe(arr):
-    total = reduce((lambda x, y: int(x) + int(y)), arr)
-    more_totals = track_sums(arr)
+    running_total = reduce((lambda x, y: int(x) + int(y)), arr)
+    more_totals = track_totals(arr)
 
     while True:
         for i in range(0, len(arr)):
-            total += int(arr[i])
+            running_total += int(arr[i])
 
-            if total not in more_totals:
-                more_totals.add(total)
+            if running_total not in more_totals:
+                more_totals.add(running_total)
                 if i == len(arr) - 1:
                     i = 0
             else:
-                return total
+                return running_total
 
 appears_twice = find_dupe(arr)
 
