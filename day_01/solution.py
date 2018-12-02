@@ -1,4 +1,5 @@
 from functools import reduce
+from input import str
 
 """
 PART 1
@@ -31,12 +32,7 @@ Here are other example situations:
 Starting with a frequency of zero, what is the resulting frequency after all of the changes in frequency have been applied?
 """
 
-handwave = """1
-2
-3
--6"""
-
-arr = handwave.split('\n')
+arr = str.split('\n')
 frequency = reduce((lambda x, y: int(x) + int(y)), arr)
 
 print(f'The frequency is { frequency }')
