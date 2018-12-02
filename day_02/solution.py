@@ -120,20 +120,19 @@ def remove_letters(text):
     return words
 
 def find_prototype(arr):
-    words = []
-    dupe = ''
+    ids = set()
+    found_id = 'Id not found'
 
     for value in arr:
-        words.extend(remove_letters(value))
+        temp = remove_letters(value)
 
-    for i in range(0, len(words) - 1):
-        look_ahead = words[i + 1:]
-        current = words[i]
-
-        if current in look_ahead:
-            dupe = current
-
-    return dupe
+        for id in temp:
+            if id not in ids:
+                ids.add(id)
+            else:
+                found_id = id
+    
+    return found_id
 
 prototype_id = find_prototype(arr)
 
