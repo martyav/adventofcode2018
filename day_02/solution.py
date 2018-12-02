@@ -2,7 +2,7 @@ import re
 from input import strings
 
 """
-Part 1
+--- Part One ---
 
 You stop falling through time, catch your breath, and check the screen on the device. "Destination reached. Current Year: 1518. 
 Current Location: North Pole Utility Closet 83N10." You made it! Now, to find those anomalies.
@@ -84,7 +84,7 @@ check_sum = calculate_checksum(arr)
 print(f'The checksum is { check_sum }')
 
 """
-Part 2
+--- Part Two ---
 
 Confident that your list of box IDs is complete, you're ready to find the boxes full of prototype fabric.
 
