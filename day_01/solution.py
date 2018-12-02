@@ -43,7 +43,7 @@ Here are other example situations:
 Starting with a frequency of zero, what is the resulting frequency after all of the changes in frequency have been applied?
 """
 
-arr = str.split('\n')
+arr = nums.split('\n')
 frequency = reduce((lambda x, y: int(x) + int(y)), arr)
 
 print(f'The frequency is { frequency }')
