@@ -1,4 +1,4 @@
-str = """qcsnyvpigkxmrdawlfdefotxbh
+strings = """qcsnyvpigkxmrdawlfdefotxbh
 qcsnyvligkymrdawljujfotxbh
 qmsnyvpigkzmrnawzjuefotxbh
 qosnyvpigkzmrnawljuefouxbh
