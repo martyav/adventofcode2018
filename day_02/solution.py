@@ -106,36 +106,34 @@ What letters are common between the two correct box IDs? (In the example above, 
 from either ID, producing fgij.)
 """
 
-def star_out_letters(text):
+def remove_letters(text):
     words = []
 
     for i in range(0, len(text)):
         if i == len(text) - 1:
-            new_word = text[:i] + '*'
+            new_word = text[:i]
         else:
-            new_word = text[:i] + '*' + text[i + 1:]
+            new_word = text[:i] + text[i + 1:]
         
         words.append(new_word)
 
     return words
 
 def find_prototype(arr):
-    starred_out = []
+    words = []
     dupe = ''
 
     for value in arr:
-        starred_out.extend(star_out_letters(value))
+        words.extend(remove_letters(value))
 
-    for i in range(0, len(starred_out) - 1):
-        look_ahead = starred_out[i + 1:]
-        current = starred_out[i]
+    for i in range(0, len(words) - 1):
+        look_ahead = words[i + 1:]
+        current = words[i]
 
         if current in look_ahead:
             dupe = current
 
-    id = dupe.replace('*', '')
-
-    return id
+    return dupe
 
 prototype_id = find_prototype(arr)
 
